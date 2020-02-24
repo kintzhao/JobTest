@@ -7,6 +7,14 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     steps:
-  
+
+    - name: pwd1  
+      run: pwd && ls 
+    - name: clone  
+      run: clone git@github.com:kintzhao/JobTest.git
+    - name: cd  
+      run: cd JobTest
+    - name: pwd2  
+      run: pwd && ls       
     - name: build
       run: cmake .. && make
