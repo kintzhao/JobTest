@@ -15,8 +15,12 @@ jobs:
       run: sudo apt-get -y install tree 
     - name: tree -l
       run: tree -l
+    - name: git clone https://github.com/kintzhao/JobTest.git
+      run: git clone https://github.com/kintzhao/JobTest.git
+    - name: cd 
+      run: cd JobTest && pwd && tree -l
     - name: cmake
-      run: pwd && ls && cd JobTest && cmake .
+      run: pwd && ls -la && cd JobTest && cmake .
     - name: ls
       run: pwd && ls    
     - name: make
