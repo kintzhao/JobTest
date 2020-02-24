@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/setup-node@master
+    - name: pwd && ls
+      run: pwd && ls
+    - name: cmake
+      run: cmake
+    - name: make
+      run: make
+    - name: pwd && ls
+      run: pwd && ls
