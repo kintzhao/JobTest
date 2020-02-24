@@ -11,6 +11,8 @@ jobs:
     - uses: actions/setup-node@master
     - name: pwd  
       run: pwd
+    - name: sudo apt-get -y install tree   
+      run: sudo apt-get -y install tree 
     - name: tree -l
       run: tree -l
     - name: git clone https://github.com/kintzhao/JobTest.git
