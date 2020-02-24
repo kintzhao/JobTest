@@ -11,12 +11,10 @@ jobs:
     - uses: actions/setup-node@master
     - name: pwd && ls
       run: pwd && ls
-    - name: install
-      run: sudo apt install -y git
-    - name: clone
-      run: git clone https://github.com/kintzhao/JobTest.git
     - name: cmake
       run: pwd && ls && cd JobTest && cmake .
+    - name: ls
+      run: pwd && ls    
     - name: make
       run: make
     - name: pwd && ls
