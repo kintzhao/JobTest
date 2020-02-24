@@ -1,0 +1,12 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    name: job1
+    runs-on: ubuntu-latest
+    steps:
+  
+    - name: build
+      run: cmake .. && make
