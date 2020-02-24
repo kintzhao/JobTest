@@ -11,19 +11,15 @@ jobs:
     - uses: actions/setup-node@master
     - name: pwd  
       run: pwd
-    - name: sudo apt-get -y install tree   
-      run: sudo apt-get -y install tree 
     - name: tree -l
       run: tree -l
     - name: git clone https://github.com/kintzhao/JobTest.git
       run: git clone https://github.com/kintzhao/JobTest.git
     - name: cd 
-      run: cd JobTest && pwd && tree -l
-    - name: cmake
-      run: pwd && ls -la && cd JobTest && cmake .
-    - name: ls
-      run: pwd && ls    
-    - name: make
-      run: make
+      run: cd JobTest && pwd && tree -l && cmake . && tree -l && make && tree -l
+    - name: cd 
+      run: pwd && ls -la && cd JobTest 
+    - name: cd 
+      run: pwd && ls -la && cd JobTest
     - name: pwd && ls
       run: pwd && ls
