@@ -14,7 +14,7 @@ jobs:
     - name: install
       run: sudo apt install -y git
     - name: clone
-      run: git clone git@github.com:kintzhao/JobTest.git
+      run: git clone https://github.com/kintzhao/JobTest.git
     - name: cmake
       run: pwd && ls && cd JobTest && cmake .
     - name: make
