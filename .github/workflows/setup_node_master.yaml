@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/setup-node@master
     - name: pwd  
-      run: pwd 
+      run: pwd
+    - name: sudo apt-get -y install tree   
+      run: sudo apt-get -y install tree 
     - name: tree -l
       run: tree -l
     - name: cmake
