@@ -17,11 +17,8 @@ jobs:
       run: tree -l
     - name: git status
       run: git status
-    - name: git clone https://github.com/kintzhao/JobTest.git
-      run: git clone https://github.com/kintzhao/JobTest.git
-    - name: cd 
+    - name: cmake and make 
       run: |
-          cd JobTest 
           pwd
           tree -l
           mkdir -p build
@@ -30,7 +27,6 @@ jobs:
           tree -l
           make
           tree -l
-    - name: cd 
-      run: pwd && tree -l && cd JobTest 
-    - name: cd 
-      run: pwd && tree -l && cd JobTest
+    - name: current dirs
+      run: pwd && tree -l 
+
