@@ -31,8 +31,6 @@ jobs:
           make
           tree -l
     - name: cd 
-      run: pwd && ls -la && cd JobTest 
+      run: pwd && tree -l && cd JobTest 
     - name: cd 
-      run: pwd && ls -la && cd JobTest
-    - name: pwd && ls
-      run: pwd && ls
+      run: pwd && tree -l && cd JobTest
