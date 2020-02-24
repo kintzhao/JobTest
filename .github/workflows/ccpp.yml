@@ -1,19 +1,16 @@
-name: C/C++ CI
-
-on: [push]
+name: Greeting from Mona
+on: push
 
 jobs:
-  build:
-
+  my-job:
+    name: My Job
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v2
-    - name: mkdir
-      run: mkdir -p build
-    - name: cd
-      run: cd build
-    - name: cmake
-      run: cmake ..
-    - name: make
-      run: make
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
